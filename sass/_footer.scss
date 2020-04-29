@@ -1,0 +1,20 @@
+.footer {
+    height: 20vh;
+    background-image: url("../img/footerBG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    address {
+        color: white;
+        font-style: normal;
+        width: 83%;
+        a{
+            text-decoration: underline;
+            color:white;
+        }
+    }
+}

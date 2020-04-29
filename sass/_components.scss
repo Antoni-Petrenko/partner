@@ -1,0 +1,12 @@
+.btn{
+    &__prim{
+        font-size: 20px;
+        font-weight: 600;
+        background-image: $main-gradient;
+        color: white;
+        border-radius: 35px;
+        line-height: 29px;
+        padding: 12px 71px;
+        box-shadow: 2px 3px 4px 2px rgba(0,0,0,0.2);
+    }
+}
