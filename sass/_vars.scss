@@ -7,7 +7,7 @@ $bg-gradient:linear-gradient(rgba(29, 153, 29, 0.8), rgba(13, 44, 13, 0.9));
 
 @mixin respond($breakpoint) {
     @if $breakpoint==phone {
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 415px) {
             @content
         }
         ;

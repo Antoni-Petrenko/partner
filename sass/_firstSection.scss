@@ -44,3 +44,16 @@
     }
 }
 
+@include respond(tab-port) {
+    .first-section{
+        &__content{
+            width: 100%;
+            & .col-top{
+                &>div{margin-left: 5.2rem;}
+            }
+            & .col-bottom{
+                &>div{margin-left: 5.2rem;}
+            }
+        }
+    }
+}

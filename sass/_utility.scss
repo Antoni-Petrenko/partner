@@ -5,3 +5,10 @@
     padding-left:$padding;
     padding-right:$padding;
 }
+
+@include respond(phone){
+    .base-p{
+        padding-left:27px;
+        padding-right:27px;
+    }
+}

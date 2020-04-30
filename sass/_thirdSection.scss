@@ -1,84 +1,155 @@
 .third-section {
-    width: calc((100% / 12) * 10);
-    margin: 0 auto;
-    padding-top: 21.5rem;
-    background-image: url("../img/thirdSectionBG.jpg");
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position-x: 43%;
-    background-position-y: 19rem;
-    &>h2 {
-        margin-left: 36px;
+  width: calc((100% / 12) * 10);
+  margin: 0 auto;
+  padding-top: 21.5rem;
+  background-image: url("../img/thirdSectionBG.jpg");
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position-x: 43%;
+  background-position-y: 19rem;
+  & > h2 {
+    margin-left: 36px;
+  }
+  &__content--1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    & > div {
+      width: 45%;
+      position: relative;
+      width: 45%;
+      position: relative;
+      background-image: url(../img/thirdSectionIMG.jpg);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 85%;
+    }
+    & > ul {
+      width: 45%;
+      & > li {
+        p.p {
+          font-size: 1.5rem;
+        }
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+  &__content--2 {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+
+    margin-top: 31.8rem;
+    img{
+        width: 50%;
+    }
+    #img{
+      width: 50%;
+      background-image: url("../img/foughtSectionIMG.jpg");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    
+    }
+   &> a{
+        align-self:flex-start;
+    }
+    & > div {
+      width: 100%;
+      display: flex;
+      &:nth-of-type(1) {
+        & > ul {
+          align-self: flex-end;
+          & > li {
+            &:not(:last-child) {
+              margin-bottom: 3rem;
+            }
+            & > p.p {
+              font-size: 2.5rem;
+              line-height: 4rem;
+              &::before {
+                content: url("../img/icons/dot.svg");
+                display: inline-block;
+                width: 1em;
+              }
+            }
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        display: flex;
+        margin-top: 5.2rem;
+        & > div > p.p {
+          font-size: 2rem;
+
+          margin-bottom: 5.2rem;
+        }
+        & > img {
+          margin-bottom: 7.2rem;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .third-section {
+    background-image: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    & > h2 {
+      margin: 0;
     }
     &__content--1 {
+      margin-top: 0;
+      flex-direction: column;
+
+      & > div {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 7rem;
-        &>div {
-            width: 45%;
-            position: relative;
-            &>img {
-                width: calc((100% / 5) * 4);
-                position: absolute;
-                bottom: 0;
-            }
+        height: 200px;
+        background-position: 100% center;
+        background-repeat: no-repeat;
+        background-size: 85%;
+        margin: 2rem 0;
+      }
+      & > ul {
+        width: 100%;
+        & > li {
+          & > p {
+            font-size: 1.8rem !important;
+          }
         }
-        &>ul {
-            width: 50%;
-            &>li {
-                p.p {
-                    font-size: 1.5rem;
-                }
-                &:not(:last-child) {
-                    margin-bottom: 3rem;
-                }
-            }
-        }
+      }
     }
     &__content--2 {
+        
+      flex-direction: row;
+      & > div {
+        flex-direction: column;
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 31.8rem;
-        img {
-            width: 100%
-        }
-        &>div {
-            width: 45%;
-            &:nth-of-type(1) {
-                &>p.p {
-                    font-size: 2rem;
-                    margin-bottom: 5.2rem;
-                }
-                &>img {
-                    margin-bottom: 7.2rem;
-                }
+        overflow: hidden;
+        &:nth-of-type(1){
+            &>img{
+                
             }
-            &:nth-of-type(2) {
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                padding-top: 9.5%;
-                &>ul {
-                    margin-bottom: 8.25rem;
-                    &>li {
-                        &:not(:last-child) {
-                            margin-bottom: 3rem;
-                        }
-                        &>p.p {
-                            font-size: 2.5rem;
-                            line-height: 4rem;
-                            &::before {
-                                content: url("../img/icons/dot.svg");
-                                display: inline-block;
-                                width: 1em;
-                            }
-                        }
-                    }
+            &>ul{
+               
+                align-self: flex-start;
+                &>li>p.p{
+                    font-size: 2.1rem;
                 }
             }
         }
+        &>img{
+            width: 100%;
+        }
+      }
     }
+  }
 }

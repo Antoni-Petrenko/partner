@@ -49,3 +49,23 @@
         }
     }
 }
+
+@include respond(tab-port) {
+    .sec-section{
+        
+        padding:$padding ;
+
+        &__content{
+            width:100%;
+            flex-direction: column;
+            &>figure{
+               flex-basis: 40vh;
+               &>figcaption{
+                   &:nth-of-type(2){
+                       font-size: 3rem;
+                   }
+               }
+            }
+        }
+    }
+  }
