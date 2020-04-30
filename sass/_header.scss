@@ -52,3 +52,41 @@
     }
 }
 
+@include respond(phone){
+    .navigation{
+        padding-top: 1rem;
+        width: 100vw;
+        overflow: hidden;
+        &>div{
+            &:nth-of-type(1){
+                &>img{
+                    width: 35vw
+                }
+                &>p{
+                    font-size: 12px;
+                    padding: 3px 20px 3px 20px;
+                    margin-right: 0px;
+                }
+            }
+            &:nth-of-type(2){
+                &>a{
+                    &:nth-of-type(1){
+                        margin: 0;
+                    }
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin-right: 0;
+                    border: none;
+                    padding: 0;
+                }
+            }
+            
+        }
+    }
+    .header__top{
+        text-align: left;
+    }
+    .header__bottom{
+        align-self: center;
+    }
+}

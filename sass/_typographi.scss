@@ -25,3 +25,11 @@
         font-weight: bolder;
     }
 }
+
+
+@include respond(desktop){
+    .header-heading{
+        font-size: 32px;
+        line-height: 53px;
+    }
+}
