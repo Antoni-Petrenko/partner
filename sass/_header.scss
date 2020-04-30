@@ -1,92 +1,105 @@
 .header {
-    padding-top: 110px;
+  padding-top: 110px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  background-image: url(../img/headerBG.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  &__top {
+    margin-top: 2rem;
+    align-self: center;
+    text-align: center;
+    & > p {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+    }
+    & > h1 {
+      margin-bottom: 5rem;
+    }
+  }
+  &__middle {
+    width: calc(100vw - 16.6vw);
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    background-image: url(../img/headerBG.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    &__top {
-        margin-top: 2rem;
-        align-self: center;
-        text-align: center;
-        &>p {
-            font-size: 1.4rem;
-            margin-bottom: 3rem;
-        }
-        &>h1 {
-            margin-bottom: 5rem;
-        }
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    & > p {
+      font-size: 2rem;
+      font-weight: bold;
+      color: black;
+      padding: 25px 27px;
+      background-color: white;
+      letter-spacing: 2px;
     }
-    &__middle {
-        width: calc(100vw - 16.6vw);
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
-        &>p {
-            font-size: 2rem;
-            font-weight: bold;
-            color: black;
-            padding: 25px 27px;
-            background-color: white;
-            letter-spacing: 2px;
-        }
-        &>a{
-            margin-top: 4rem;
-        }
+    & > a {
+      margin-top: 4rem;
     }
-    &__bottom {
-        &>a {
-            font-size: 1.5rem;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 27.5rem;
-            font-weight: bold;
-            color: black;
-            padding: 10px 27px;
-            background-color: rgba(255, 255, 255, .6);
-        }
+  }
+  &__bottom {
+    & > a {
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 27.5rem;
+      font-weight: bold;
+      color: black;
+      padding: 10px 27px;
+      background-color: rgba(255, 255, 255, 0.6);
     }
+  }
 }
 
-@include respond(phone){
-    .navigation{
-        padding-top: 1rem;
-        width: 100vw;
-        overflow: hidden;
-        &>div{
-            &:nth-of-type(1){
-                &>img{
-                    width: 35vw
-                }
-                &>p{
-                    font-size: 12px;
-                    padding: 3px 20px 3px 20px;
-                    margin-right: 0px;
-                }
-            }
-            &:nth-of-type(2){
-                &>a{
-                    &:nth-of-type(1){
-                        margin: 0;
-                    }
-                    font-size: 12px;
-                    font-weight: 600;
-                    margin-right: 0;
-                    border: none;
-                    padding: 0;
-                }
-            }
-            
+@include respond(phone) {
+  .navigation {
+    padding-top: 1rem;
+    width: 100vw;
+    overflow: hidden;
+    min-height: 97px;
+    & > div {
+      &:nth-of-type(1) {
+        & > img {
+          width: 35vw;
         }
+        & > p {
+          font-size: 10px;
+          padding: 3px 20px 3px 20px;
+          margin-right: 0px;
+        }
+      }
+      &:nth-of-type(2) {
+        & > a {
+          &:nth-of-type(1) {
+            margin: 0;
+          }
+          font-size: 12px;
+          font-weight: 600;
+          margin-right: 0;
+          border: none;
+          padding: 0;
+        }
+      }
     }
-    .header__top{
-        text-align: left;
+  }
+  .header__top {
+    text-align: left;
+  }
+  .header__middle {
+      &>p{
+          font-size: 16px;
+          letter-spacing: 1px;
+          width: 100%;
+          text-align: center;
+      }
+    & > a {
+      margin-left: auto;
+      margin-right: auto;
     }
-    .header__bottom{
-        align-self: center;
-    }
+  }
+  .header__bottom {
+    align-self: center;
+    margin:3rem 0
+  }
 }

@@ -13,3 +13,8 @@
         overflow: hidden;
     }
 }
+@include respond(phone){
+    .letter-sp{
+        letter-spacing: 7px;
+    }
+}

@@ -10,3 +10,9 @@
         box-shadow: 2px 3px 4px 2px rgba(0,0,0,0.2);
     }
 }
+@include respond(phone){
+    .btn__prim{
+        font-size: 14px;
+        padding: 7px 42px;
+    }
+}

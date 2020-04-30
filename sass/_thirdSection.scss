@@ -44,19 +44,18 @@
     flex-flow: column wrap;
 
     margin-top: 31.8rem;
-    img{
-        width: 50%;
+    img {
+      width: 50%;
     }
-    #img{
+    #img {
       width: 50%;
       background-image: url("../img/foughtSectionIMG.jpg");
       background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
-    
     }
-   &> a{
-        align-self:flex-start;
+    & > a {
+      align-self: flex-start;
     }
     & > div {
       width: 100%;
@@ -128,28 +127,42 @@
       }
     }
     &__content--2 {
-        
       flex-direction: row;
       & > div {
         flex-direction: column;
         width: 100%;
         overflow: hidden;
-        &:nth-of-type(1){
-            &>img{
-                
+        &:nth-of-type(1) {
+          & > ul {
+            align-self: flex-start;
+            & > li > p.p {
+              font-size: 2.1rem;
             }
-            &>ul{
-               
-                align-self: flex-start;
-                &>li>p.p{
-                    font-size: 2.1rem;
-                }
-            }
+          }
         }
-        &>img{
-            width: 100%;
+        & > img {
+          width: 100%;
         }
       }
     }
   }
+}
+
+@include respond(phone){
+    .third-section{
+        &__content--1{
+           
+            &>ul>li>span{
+                display: block;
+                margin: 2rem 0;
+            }
+        }
+    }
+    .third-section>h2{
+        font-size: 3rem;
+       
+    }
+    .third-section__content--2>a{
+        margin: auto;
+    }
 }
